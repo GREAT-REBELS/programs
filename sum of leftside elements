@@ -1,0 +1,29 @@
+//Sum of LeftSide Elements
+/*
+5
+2 4 6 8 10
+O/P:
+0 2 6 12 20
+*/
+#include <stdio.h>
+int main()
+{
+int N,sum=0;
+scanf("%d",&N);
+int arr[N];
+for(int i=0;i<N;i++)
+{
+    scanf("%d",&arr[i]);
+}
+for(int i=0;i<N;i++)
+{
+sum=0;
+    {
+    for(int j=i-1;j>=0;j--)
+    {
+        sum+=arr[j];
+    }
+    }
+    printf("%d ",sum);
+}
+}
