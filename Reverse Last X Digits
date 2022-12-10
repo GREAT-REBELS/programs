@@ -23,5 +23,12 @@ while(M!=0)
 arr[k++]=M%10;
 M/=10;
 }
-
+for(int i=k-1;i>=x;i--)
+{
+printf("%d",arr[j]);
+}
+for(int j=0;j<X;j++)
+{
+printf("%d",arr[i]);
+}
 }
