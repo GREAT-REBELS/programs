@@ -1,3 +1,43 @@
+Example Input/Output 1:                                  
+Input:
+abcdef
+mnopqr
+Output:
+nmporq
+badcfe
+
+Example Input/Output 2:
+Input:
+abcdefg
+mnopqrs
+Output:
+nmporqg
+badcfes
+
+Example Input/Output 3:                                
+Input:
+abcdefghijk
+mnopqrs
+Output:
+nmporqgsijk
+badcfeh
+
+Example Input/Output 4:                                
+Input:
+abcdefg
+mnopqrstuvw
+Output:
+nmporqt
+badcfesguvw
+
+Example Input/Output 5:                                
+Input:
+a
+z
+Output:
+a
+z
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
 int main()
