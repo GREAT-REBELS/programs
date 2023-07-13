@@ -27,6 +27,7 @@ while True:
     N=int(input("Enter Your Choice : "))
     if(N==0):
         print("Thank You")
+        quit()
     elif N==1:
         obj.list_books()
     elif N==2:
