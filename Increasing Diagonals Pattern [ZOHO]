@@ -1,0 +1,33 @@
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+int N,D;
+scanf("%d",&N);
+for(int i=0;i<N;i++)
+{
+    int k=N-1;
+    D=i+1;
+   for(int j=0;j<N;j++)
+   {
+       if(i+j==N-1)
+       {
+           printf("%d ",D);
+       }
+       else if(i+j>N-1)
+       {
+           printf("%d ",D+=k);
+           k--;
+       }
+       else
+       {
+           printf("* ");
+       }
+   }
+   printf("\n");
+}
+}
