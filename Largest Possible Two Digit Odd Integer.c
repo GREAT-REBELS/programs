@@ -61,11 +61,12 @@ for(int i=0;i<k1;i++)
 {
     for(int j=0;j<k2;j++)
     {
-        int D = arr1[i]*10+arr2[j];
-        if(D%2!=0)
-        {
-        max = fmax(D,max);
-        }
+        int D1 = arr1[i]*10+arr2[j];
+        int D2 = arr2[j]*10+arr1[i];
+        if(D1%2!=0)
+          max = fmax(D1,max);
+        if(D2%2!=0)
+          max = fmax(D2,max);
     }
 }
 if(max==0)
