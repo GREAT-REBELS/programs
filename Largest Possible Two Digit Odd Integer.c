@@ -21,3 +21,55 @@ Input:
 Output:
 99
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <math.h>
+int *sort(int arr[],int N) 
+{
+    for(int i=0;i<N;i++)
+    {
+        for(int j=i+1;j<N;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+int main()
+{
+int A,B;
+scanf("%d %d",&A,&B);
+int a1[51],a2[51],k1=0,k2=0;
+while(A!=0)
+{
+    a1[k1++] = A%10;
+    A/=10;
+}
+while(B!=0)
+{
+    a2[k2++] = B%10;
+    B/=10;
+}
+int *arr1 = sort(a1,k1);
+int *arr2 = sort(a2,k2);
+int max=0;
+for(int i=0;i<k1;i++)
+{
+    for(int j=0;j<k2;j++)
+    {
+        int D = arr1[i]*10+arr2[j];
+        if(D%2!=0)
+        {
+        max = fmax(D,max);
+        }
+    }
+}
+if(max==0)
+  printf("-1");
+else
+  printf("%d",max);
+}
