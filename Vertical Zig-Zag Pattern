@@ -1,0 +1,57 @@
+The program must accept an even integer N as the input. The program must print the desired pattern as shown in the Example Input/Output  section. 
+
+Example Input/Output 1:
+Input:
+5
+Output:
+5 50 55 100 105 
+10 45 60 95 110 
+15 40 65 90 115 
+20 35 70 85 120 
+25 30 75 80 125 
+
+Example Input/Output 2:
+Input:
+4
+Output:
+4 32 36 64 
+8 28 40 60 
+12 24 44 56 
+16 20 48 52 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+int main()
+{
+int N;
+scanf("%d",&N);
+int D=N;
+int mat[N][N];
+for(int i=0;i<N;i++)
+{
+    if(i%2==0)
+    {
+        for(int j=0;j<N;j++)
+        {
+            mat[j][i] = D;
+            D+=N;
+        }
+    }
+    else
+    {
+        for(int j=N-1;j>=0;j--)
+        {
+            mat[j][i] = D;
+            D+=N;
+        }
+    }
+}
+for(int i=0;i<N;i++)
+{
+    for(int j=0;j<N;j++)
+    {
+        printf("%d ",mat[i][j]);
+    }
+    printf("\n");
+}
+}
