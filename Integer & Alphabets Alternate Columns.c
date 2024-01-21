@@ -31,10 +31,10 @@ int main() {
   for (int i = 0; i < N; i++) {
     int dig = i + 1;
     char ch = 'a';
-    if (ch == 'z') {
+    ch += (dig - 2);
+     if (ch == '{') {
       ch = 'a';
     }
-    ch += (dig - 2);
     for (int j = 0; j < D; j++) {
       if (j % 2 == 0) {
         printf("%d ", dig);
