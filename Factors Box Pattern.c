@@ -1,3 +1,23 @@
+The program must accept an integer N as the input. The program must find the factors of N and print the desired pattern as shown in the Example Input/Output section.
+
+Example Input/Output 1:
+Input: 6
+Output
+1111111
+1222221
+1233321
+1236321
+1233321
+1222221
+1111111
+    
+Example Input/Output 2:
+Input: 7
+Output
+111
+171
+111
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
 int main()
 {
