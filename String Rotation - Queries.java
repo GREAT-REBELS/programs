@@ -1,4 +1,3 @@
-String Rotation - Queries
 The program must accept a string S and Q queries as the input. Each query contains an alphabet D and an integer M. The alphabet D represents a direction (L or R). The integer M represents a magnitude. 
   For each query, the program must modify the string S based on the conditions.
 - If the direction is L, then the program must rotate the string S by M positions in the clockwise direction.
@@ -46,6 +45,7 @@ public class Main
 	while(N!=0){
 	    char ch = sc.next().charAt(0);
 	    int T=sc.nextInt();
+	    T = T%(str.length())
 	    if(ch=='L'){
 	        str=str.substring(T,str.length())+str.substring(0,T);
 	    }
