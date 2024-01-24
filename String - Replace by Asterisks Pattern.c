@@ -31,10 +31,9 @@ int main() {
   scanf("%s", str);
   int D = N;
   int len = strlen(str);
-  int i, j;
-  for (i = 0; i < N; i++) {
+  for (int i = 0; i < N; i++) {
     int cnt = 0;
-    for (j = 0; j < len; j++) {
+    for (int j = 0; j < len; j++) {
       if (str[j] != '*') {
         cnt++;
       }
