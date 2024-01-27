@@ -28,11 +28,10 @@ int main() {
   int k = 1, strt = 0, end = N - 1;
   for (int i = 0; i < N; i++) {
     for (int j = 0; j < N; j++) {
-      if (j == strt) {
+      if (j == strt || j == end) {
         printf("%d ", k++);
-      } else if (j == end) {
-        printf("%d ", k++);
-      } else {
+      } 
+      else {
         printf("* ");
       }
     }
