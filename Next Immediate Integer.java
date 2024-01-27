@@ -1,3 +1,22 @@
+The program must accept an integer N as the input. The program must print the next immediate integer that has all the digits in N as the output. If there is no such next immediate integer then the program
+must print -1 as the output.
+  
+Example Input/Output 1:
+Input: 2586
+Output: 2658
+Explanation: The next immediate integer that has all the digits in 2586 is 2658. Hence the output is 2658
+  
+Example Input/Output 2:
+Input:
+3111
+Output:
+-1
+  
+Example Input/Output 3:
+Input:
+101
+Output:
+110
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 import java.util.Arrays;
