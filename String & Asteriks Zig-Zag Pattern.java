@@ -1,9 +1,36 @@
+Example Input/Output 1:
+Input:
+eat 
+4
+Output:
+***e
+at**
+*###
+####
 
-
-
-
-
-
+Example Input/Output 2:
+Input:
+abcdefghijklmnopqrst
+5
+Output:
+****a
+bc***
+**def
+ghij*
+klmno
+  
+Example Input/Output 3:
+Input:
+abcDEfG
+7
+Output:
+******a
+bc*****
+****DEf
+G###***
+**#####
+######*
+#######
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 public class Main {
