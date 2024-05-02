@@ -73,8 +73,8 @@ public class Main {
           System.out.print(mat[i][j] + " ");
         }
       }
+      System.out.println();
     }
-    System.out.println();
     //printing the last row of the array
     for (int i = 0; i < C; i++) {
       System.out.print(arr[end--] + " ");
