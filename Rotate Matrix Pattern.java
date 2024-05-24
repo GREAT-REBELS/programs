@@ -49,3 +49,42 @@ Output:
 **78 44
 ***98
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int mat[][] = new int[N][N];
+    for (int i = 0; i < N; i++) {
+      for (int j = 0; j < N; j++) {
+        mat[i][j] = sc.nextInt();
+      }
+    }
+
+    for (int i = 0; i < N; i++) {
+      for (int j = 0; j < N - i - 1; j++) {
+        System.out.print("*");
+      }
+      int row = i, col = 0;
+      while (row >= 0) {
+        System.out.print(mat[row][col] + " ");
+        row--;
+        col++;
+      }
+      System.out.println();
+    }
+
+    for (int i = 1; i < N; i++) {
+      for (int j = 0; j < i; j++) {
+        System.out.print("*");
+      }
+      int row = N - 1, col = i;
+      while (col < N) {
+        System.out.print(mat[row][col] + " ");
+        col++;
+        row--;
+      }
+      System.out.println();
+    }
+  }
+}
