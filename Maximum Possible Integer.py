@@ -30,7 +30,7 @@ def digSum(N):
 N = int(input())
 D = N - 1
 K = digSum(N)
-while D >= 10:
+while D:
     if digSum(D) > K:
         print(D)
         quit()
