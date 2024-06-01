@@ -1,3 +1,33 @@
+There is an RxC chessboard. The chessboard contains one bishop, one pawn and empty squares. The indices of the bishop (X, Y) and the pawn (M, N) are passed as the input to the program. The bishop moves in any 
+direction diagonally. If the pawn is encountered or meets the end of the board, the movement of bishop stops. The program must print the number of squares that the bishop can move as the output.
+
+Example Input/Output 1:
+Input:
+7 7
+3 3
+6 0
+  
+Output
+11
+Explanation:
+The bishop movable squares are highlighted below.
+- * * * * * -
+* - * * * - *
+* * - * - * *
+* * * B * * *
+* * - * - * *
+* - * * * - *
+P * * * * * -
+Hence the count is 11.
+
+Example Input/Output 2:
+Input:
+5 6
+1 1
+3 1
+
+Output:
+6
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 public class Main {
