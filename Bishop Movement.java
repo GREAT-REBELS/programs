@@ -3,12 +3,12 @@ import java.util.*;
 public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    int N = sc.nextInt();
-    int M = sc.nextInt();
+    int R = sc.nextInt();
+    int C = sc.nextInt();
     int X = sc.nextInt();
     int Y = sc.nextInt();
-    int A = sc.nextInt();
-    int B = sc.nextInt();
+    int M = sc.nextInt();
+    int N = sc.nextInt();
 
     int row = 0, col = 0, cnt = 0;
 
@@ -16,7 +16,7 @@ public class Main {
     row = X - 1;
     col = Y - 1;
     while (row >= 0 && col >= 0) {
-      if (row == A && col == B) {
+      if (row == M && col == N) {
         break;
       } else {
         row--;
@@ -27,8 +27,8 @@ public class Main {
     //Down Left Diagonally
     row = X + 1;
     col = Y + 1;
-    while (row < N && col < M) {
-      if (row == A && col == B) {
+    while (row < R && col < C) {
+      if (row == M && col == N) {
         break;
       } else {
         row++;
@@ -39,8 +39,8 @@ public class Main {
     //Up Right Diagonally 
     row = X - 1;
     col = Y + 1;
-    while (row >= 0 && col < M) {
-      if (row == A && col == B) {
+    while (row >= 0 && col < C) {
+      if (row == M && col == N) {
         break;
       } else {
         row--;
@@ -51,8 +51,8 @@ public class Main {
     //Down Right Diagonally 
     row = X + 1;
     col = Y - 1;
-    while (row < N && col >= 0) {
-      if (row == A && col == B) {
+    while (row < R && col >= 0) {
+      if (row == M && col == N) {
         break;
       } else {
         row++;
