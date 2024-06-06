@@ -32,18 +32,22 @@ SkillSkillRack
 Output:
 Ra Sk ac ck il ki IR II
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def splitWord(word, N):
-    subStrSet = set()
-    for i in range(len(word) - N + 1):
-        subStrSet.add(word[i : i + N])
-    return subStrSet
+def splitWord(word,N):
+    subStrLst = []
+    for i in range(len(word)-N+1):
+        subStrLst.append(word[i:i+N])
+    return subStrLst
 
 word1 = input()
 word2 = input()
 N = int(input())
-subStrSet1, subStrSet2 = splitWord(word1, N), splitWord(word2, N)
-commonSubstrs = subStrSet1.intersection(subStrSet2)
+subStrLst1,subStrLst2 = splitWord(word1,N),splitWord(word2,N)
+commonSubstrs = []
+for subStr in subStrLst1:
+    if subStr in subStrLst2:
+        commonSubstrs.append(subStr)
 if not commonSubstrs:
     print(-1)
     quit()
-print(*(sorted(commonSubstrs)))
+
+print(*sorted(commonSubstrs))
