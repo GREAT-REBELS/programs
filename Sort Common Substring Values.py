@@ -38,8 +38,8 @@ def splitWord(word,N):
         subStrLst.append(word[i:i+N])
     return subStrLst
 
-word1 = input()
-word2 = input()
+word1 = input().strip()
+word2 = input().strip()
 N = int(input())
 subStrLst1,subStrLst2 = splitWord(word1,N),splitWord(word2,N)
 commonSubstrs = []
