@@ -1,6 +1,7 @@
 The 7 days in a week from Sunday to Saturday are numbered from 1 to 7. On Sunday and Saturday, a magical pot will double the gold coins put in it. On remaining days, the magical pot will just increase the coins 
 by 5. The program must accept two integers N and D representing the number of gold coins in the pot and the starting day respectively. The program must print the maximum coins M that can be obtained using the 
 magical pot for seven days continuously.
+
 Example Input/Output 1:
 Input:
 1 7
@@ -37,10 +38,3 @@ while i < 7:
     i += 1
     D += 1
 print(N)
-
-(OR) 
-It is said that to calculate for seven days continously, So It will include all the days in a week.On Saturday and Sunday Totally the magical pot will quadruple coins and from Monday to Friday the magical pot 
-will increase by total of 25 coins
-N, D = map(int, input().split())
-print((N + 25) * 4)
-
