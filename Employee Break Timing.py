@@ -31,3 +31,23 @@ Input:
 Output:
 1 Hour 10 Minutes
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+N = int(input())
+records = []
+for _ in range(N):
+    entryTime,exitTime = input().split()
+    records.append((entryTime,exitTime))
+totalBreak = 0 
+for i in range(1,N):
+    exitTime = records[i-1][1] #Prev record exit time 
+    entryTime = records[i][0] #curr record entry time 
+    exit_hr,exit_mins = map(int,exitTime.split(':'))
+    entry_hr,entry_mins = map(int,entryTime.split(':'))
+    #converting entryTime,exitTime to minutes 
+    entryMins = entry_hr*60 + entry_mins
+    exitMins = exit_hr*60 + exit_mins 
+    
+    totalBreak+=(entryMins-exitMins)
+#converting the totalBreak(is in minutes) into Hours and Minutes
+totalBreakHours = totalBreak//60 
+totalBreakMinutes = totalBreak%60
+print(f"{totalBreakHours} Hours {totalBreakMinutes} Minutes")
