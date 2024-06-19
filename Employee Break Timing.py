@@ -50,4 +50,4 @@ for i in range(1,N):
 #converting the totalBreak(is in minutes) into Hours and Minutes
 totalBreakHours = totalBreak//60 
 totalBreakMinutes = totalBreak%60
-print(f"{totalBreakHours} Hours {totalBreakMinutes} Minutes")
+print(f"{totalBreakHours} {'Hours' if totalBreakHours!=1 else 'Hour'} {totalBreakMinutes} Minutes")
