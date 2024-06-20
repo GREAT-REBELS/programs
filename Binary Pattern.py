@@ -40,8 +40,8 @@ def generateBinaryNums(length, binaryStr=""):
     if length == 0:
         print(binaryStr)
         return
-    generateBinaryNums(length - 1, binaryStr + "0")
-    generateBinaryNums(length - 1, binaryStr + "1")
+    generateBinaryNums(length - 1, binaryStr + '0' + ' ')
+    generateBinaryNums(length - 1, binaryStr + '1' + ' ')
 
 N = int(input())
 for i in range(1, N + 1):
