@@ -53,12 +53,11 @@ NO
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 public class Main {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int R = sc.nextInt();
         int C = sc.nextInt();
-        int mat[][] = new int[R][C];
+        int[][] mat = new int[R][C];
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
                 mat[i][j] = sc.nextInt();
@@ -66,43 +65,49 @@ public class Main {
         }
         int X = sc.nextInt();
         int Y = sc.nextInt();
-        int found = 0;
+        boolean found = false;
         for (int i = 0; i < R - 1; i++) {
             for (int j = 0; j < C; j++) {
                 if (mat[i][j] == X) {
-                    found = chk(mat, R, C, i, j, Y);
+                    if (chk(mat, R, C, i, j, Y)) {
+                        found = true;
+                        break;
+                    }
                 } else if (mat[i][j] == Y) {
-                    found = chk(mat, R, C, i, j, X);
-                }
-                if (found == 1) {
-                    System.out.println("YES");
-                    return;
+                    if (chk(mat, R, C, i, j, X)) {
+                        found = true;
+                        break;
+                    }
                 }
             }
+            if (found) {
+                break;
+            }
         }
-        System.out.println("NO");
+        if (found) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
     }
-    static int chk(int[][] mat, int R, int C, int i, int j, int ele) {
+
+    static boolean chk(int[][] mat, int R, int C, int i, int j, int ele) {
         int R1 = i, C1 = j;
         int R2 = i, C2 = j;
-
         while (R1 < R && C1 >= 0) {
             if (mat[R1][C1] == ele) {
-                return 1;
+                return true;
             }
             R1++;
             C1--;
         }
-
         while (R2 < R && C2 < C) {
             if (mat[R2][C2] == ele) {
-                return 1;
+                return true;
             }
             R2++;
             C2++;
         }
-
-        return 0;
+        return false;
     }
-
 }
