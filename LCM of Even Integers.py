@@ -27,8 +27,8 @@ def GCD(a, b):
 def LCM(a, b):
     return (a * b) // GCD(a, b)
 
-N = int(input().strip())
-lst = list(map(int, input().strip().split()))
+N = int(input())
+lst = list(map(int, input().split()))
 
 even_numbers = [num for num in lst if num % 2 == 0]
 
