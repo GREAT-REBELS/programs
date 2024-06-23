@@ -3,8 +3,8 @@ company has decided to form teams based on the following conditions.
 - Each team contains at most 5 employees.
 - Each team can have a maximum of 3 employees with negative rating.
 The program must accept N integers representing the ratings of the N employees as the input. The program must print the minimum number of teams T (that can be formed based on the above conditions) as the output.
-Note: All ratings are non-zero.  Example Input/Output 1:
-
+Note: All ratings are non-zero.  
+Example Input/Output 1:
 Input: 
 6 
 5 -1 -6 -2 -6 7
