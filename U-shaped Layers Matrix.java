@@ -66,7 +66,7 @@ public class Main {
     }
     int strt = 0, end = C - 1;
     int D = R - 1;
-    while (strt <= end) {
+    while (strt <= end && D>=0) {
       for (int i = 0; i <= D; i++) {
         System.out.print(mat[i][strt] + " ");
       }
