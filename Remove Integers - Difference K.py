@@ -24,13 +24,16 @@ Input:
 Output: 
 6
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-nums = list(map(int, input().split()))
+nums = list(map(int,input().split()))
 K = int(input())
-left = 0
+left = 0 
 len_ = len(nums)
 min_removal = len_
+nums.sort()
 for right in range(len_):
     while nums[right] - nums[left] > K:
-        left += 1
-    min_removal = min(min_removal, len_ - (right - left + 1))
+        left+=1
+    min_removal = min(min_removal,len_-(right-left+1)) 
 print(min_removal)
+        
+    
