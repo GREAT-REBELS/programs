@@ -16,10 +16,10 @@ Yes
 Explanation:
 The four string values are teen, meal, neam and lift.
 The four boundaries of the matrix are highlighted below.
-t e e n
-f c e e
-i u g a
-l a e m
+'t' 'e' 'e' 'n'
+'f' c e 'e'
+'i' u g 'a'
+'l' 'a' 'e' 'm'
 The first row representing the string teen.
 The last column representing the string neam.
 The last row representing the string meal.
