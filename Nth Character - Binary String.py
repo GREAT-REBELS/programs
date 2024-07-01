@@ -32,10 +32,13 @@ Output:
 binaryStr = input()
 R,N = map(int,input().split())
 expandedBinaryStr = []
+cnt = 0
 for ch in binaryStr:
     expandedBinaryStr.append(ch)
-    if ch=='1':
-        expandedBinaryStr.append('0')
-    else:
-        expandedBinaryStr.append('1')
+    if cnt<R:
+        if ch=='1':
+            expandedBinaryStr.append('0')
+        else:
+            expandedBinaryStr.append('1')
+    cnt+=1
 print(expandedBinaryStr[N-1])
