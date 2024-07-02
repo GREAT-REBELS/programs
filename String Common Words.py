@@ -30,10 +30,12 @@ Output
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 words1 = input().split()
 words2 = input().split()
+N = int(input())
 common_words = []
 for word in words1:
-    if word in words2 and word not in common_words:
-        common_words.append(word)
+    if len(word) == N:
+        if word in words2 and word not in common_words:
+            common_words.append(word)
 if not common_words:
     print(-1)
     quit()
