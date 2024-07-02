@@ -28,3 +28,13 @@ you need to put down the first few blocks in the right place
 Output
 -1
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+words1 = input().split()
+words2 = input().split()
+common_words = []
+for word in words1:
+    if word in words2 and word not in common_words:
+        common_words.append(word)
+if not common_words:
+    print(-1)
+    quit()
+print(common_words)
