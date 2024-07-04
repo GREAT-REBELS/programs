@@ -23,26 +23,3 @@ Output:
 14 78 19 12
 25 16 14 78
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-N = int(input())
-arr = list(map(int, input().split()))
-K = int(input())
-
-left, right = 0, K
-minInd,maxInd = left,left
-subArr_sum = sum(arr[left:right])
-min_sum, max_sum = subArr_sum, subArr_sum
-
-while left < N-K:
-    subArr_sum += arr[right] - arr[left]
-    left += 1
-    right += 1
-    if subArr_sum > max_sum:
-        max_sum = subArr_sum
-        maxInd = left
-
-    if subArr_sum < min_sum:
-        min_sum = subArr_sum
-        minInd = left
-
-print(*arr[minInd:minInd+K])
-print(*arr[maxInd:maxInd+K])
