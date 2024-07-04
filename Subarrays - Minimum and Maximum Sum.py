@@ -23,3 +23,19 @@ Output:
 14 78 19 12
 25 16 14 78
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+N = int(input())
+arr = list(map(int, input().split()))
+K = int(input())
+currSubArr_sum = sum(arr[:K])
+minInd, maxInd = 0, 0
+minSum, maxSum = currSubArr_sum, currSubArr_sum
+for i in range(K, N):
+    currSubArr_sum = (currSubArr_sum + arr[i]) - arr[i - K]
+    if currSubArr_sum > maxSum:
+        maxSum = currSubArr_sum
+        maxInd = i - K + 1
+    if currSubArr_sum < minSum:
+        minSum = currSubArr_sum
+        minInd = i - K + 1
+print(*arr[minInd : minInd + K])
+print(*arr[maxInd : maxInd + K])
