@@ -27,4 +27,14 @@ Output
 0
 3
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+N, G = input().split()
+right_cnt, wrong_cnt = 0, 0
+for i in range(len(N)):
+    if N[i] == G[i]:
+        right_cnt += 1
+for ch in set(N):
+    wrong_cnt += min(N.count(ch), G.count(ch))
+wrong_cnt -= right_cnt
+print(right_cnt)
+print(wrong_cnt)
 
