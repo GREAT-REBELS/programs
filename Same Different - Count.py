@@ -27,17 +27,4 @@ Output
 0
 3
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-from collections import Counter
-word1,word2 = input().split()
-counter = Counter(word1)
-k = 0
-rght_cnt,wrng_cnt = 0,0
-for ch in word2:
-    if ch == word1[k]:
-        rght_cnt+=1 
-    elif ch in word1 and counter[ch]>0 :
-        wrng_cnt+=1
-        counter[ch]-=1
-    k+=1
-print(rght_cnt)
-print(wrng_cnt)
+
