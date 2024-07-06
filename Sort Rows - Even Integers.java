@@ -34,4 +34,16 @@ Output:
 36 13 38 10 15
 84 48 94 18 79
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+def count_even_numbers(row):
+    return sum(1 for num in row if num % 2 == 0)
+
+R, C = map(int, input().split())
+matrix = []
+for _ in range(R):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+row_counts = [(count_even_numbers(matrix[i]), i) for i in range(R)]
+row_counts.sort(key=lambda x: (x[0], x[1]))
+for row in row_counts:
+    print(*matrix[row[1]])
+
