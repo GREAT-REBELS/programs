@@ -1,12 +1,24 @@
+The program must accept an integer N as the input. The program must print the primorial of N as the output. The primorial of N is defined as the product of the first N prime integers.
+
+Example Input/Output 1:
+Input:  
+3
+Output: 
+30
+Explanation:
+The first 3 prime integers are 2, 3 and 5. So their product 30 (2*3*5) is printed as the output.
+
+Example Input/Output 2:
+Input: 
+5
+Output: 
+2310
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def isPrime(num):
-    flg = 1
     for i in range(2, num // 2 + 1):
         if num % i == 0:
-            flg = 0
-            return 0
-    if flg:
-        return 1
+           return 0
+    return 1
 
 Num = int(input())
 res = 2
