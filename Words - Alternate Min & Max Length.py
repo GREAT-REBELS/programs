@@ -25,3 +25,26 @@ All good things must come to an end
 Output:
 All end good to must come
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+words = input().split()
+left, K = 0, 0
+right = len(words) - 1
+while left < right:
+    len_left = len(words[left])
+    len_right = len(words[right])
+    if K % 2:
+        if len_left > len_right:
+            print(words[left], end=" ")
+        elif len_right > len_left:
+            print(words[right], end=" ")
+        else:
+            print(words[left], words[right], end=" ")
+    else:
+        if len_left < len_right:
+            print(words[left], end=" ")
+        elif len_right < len_left:
+            print(words[right], end=" ")
+        else:
+            print(words[left], words[right], end=" ")
+    K += 1
+    left += 1
+    right -= 1
