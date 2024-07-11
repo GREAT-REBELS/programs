@@ -73,28 +73,24 @@ public class Main {
     int D1 = row, D2 = col, D3 = col;
     while (D1 >= 0) {
       if (D2 >= 0) {
-        mat[D1][D2] = -1;
-        D2 -= 1;
+        mat[D1][D2--] = -1;
       }
       if (D3 < C) {
-        mat[D1][D3] = -1;
-        D3 += 1;
+        mat[D1][D3++] = -1;
       }
-      D1 -= 1;
+      D1 --;
     }
     D1 = row;
     D2 = col;
     D3 = col;
     while (D1 < R) {
       if (D2 >= 0) {
-        mat[D1][D2] = -1;
-        D2 -= 1;
+        mat[D1][D2--] = -1;
       }
       if (D3 < C) {
-        mat[D1][D3] = -1;
-        D3 += 1;
+        mat[D1][D3++] = -1;
       }
-      D1 += 1;
+      D1 ++;
     }
     for (int i = 0; i < R; i++) {
       for (int j = 0; j < C; j++) {
@@ -102,6 +98,5 @@ public class Main {
       }
       System.out.println();
     }
-
   }
 }
