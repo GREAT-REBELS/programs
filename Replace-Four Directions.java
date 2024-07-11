@@ -46,4 +46,62 @@ Output:
 90 9 * 43
 3 * 39 *
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int R = sc.nextInt();
+    int C = sc.nextInt();
+    int mat[][] = new int[R][C];
+    for (int i = 0; i < R; i++) {
+      for (int j = 0; j < C; j++) {
+        mat[i][j] = sc.nextInt();
+      }
+    }
+    int X = sc.nextInt();
+    int row = -1, col = -1;
+    chk:
+      for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+          if (mat[i][j] == X) {
+            row = i;
+            col = j;
+            break chk;
+          }
+        }
+      }
+    int D1 = row, D2 = col, D3 = col;
+    while (D1 >= 0) {
+      if (D2 >= 0) {
+        mat[D1][D2] = -1;
+        D2 -= 1;
+      }
+      if (D3 < C) {
+        mat[D1][D3] = -1;
+        D3 += 1;
+      }
+      D1 -= 1;
+    }
+    D1 = row;
+    D2 = col;
+    D3 = col;
+    while (D1 < R) {
+      if (D2 >= 0) {
+        mat[D1][D2] = -1;
+        D2 -= 1;
+      }
+      if (D3 < C) {
+        mat[D1][D3] = -1;
+        D3 += 1;
+      }
+      D1 += 1;
+    }
+    for (int i = 0; i < R; i++) {
+      for (int j = 0; j < C; j++) {
+        System.out.print(mat[i][j] == -1 ? "*" : mat[i][j] + " ");
+      }
+      System.out.println();
+    }
+
+  }
+}
