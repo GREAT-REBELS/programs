@@ -94,7 +94,7 @@ public class Main {
     }
     for (int i = 0; i < R; i++) {
       for (int j = 0; j < C; j++) {
-        System.out.print(mat[i][j] == -1 ? "*" : mat[i][j] + " ");
+        System.out.print(mat[i][j] == -1 ? "* " : mat[i][j] + " ");
       }
       System.out.println();
     }
