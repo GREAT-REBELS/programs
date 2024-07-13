@@ -25,7 +25,7 @@ def digitalSum(num):
     while num:
         digSum += num % 10
         num = num // 10
-    if digSum > 10:
+    if digSum >= 10:
         return digitalSum(digSum)
     return digSum
 
