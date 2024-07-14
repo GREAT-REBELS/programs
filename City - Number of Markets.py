@@ -35,3 +35,22 @@ Input:
 Output:
 3
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def move(i, j):
+    if i < 0 or i >= R or j < 0 or j >= C or matrix[i][j] == -1 or matrix[i][j] == 0:
+        return
+    matrix[i][j] = -1
+    move(i + 1, j)
+    move(i - 1, j)
+    move(i, j + 1)
+    move(i, j - 1)
+    
+
+R, C = map(int, input().split())
+matrix = [list(map(int, input().split())) for _ in range(R)]
+res = 0
+for r in range(R):
+    for c in range(C):
+        if matrix[r][c] == 1 and matrix[r][c]!=-1:
+            move(r, c)
+            res += 1
+print(res)
