@@ -40,7 +40,7 @@ public class Main {
   static void transposeMatrix(int mat[][]) {
     int N = mat.length;
     for (int i = 0; i < N; i++) {
-      for (int j = 0; j < N; j++) {
+      for (int j = i; j < N; j++) {
         int temp = mat[i][j];
         mat[i][j] = mat[j][i];
         mat[j][i] = temp;
