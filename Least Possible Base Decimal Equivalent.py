@@ -46,4 +46,5 @@ base = maxDig + 1
 dec = 0
 for i, digit in enumerate(S[::-1]):
     dec += int(digit, 36) * (base**i)
+#The decimal equivalent of a number with base can also be found using int(number,base)
 print(dec)
