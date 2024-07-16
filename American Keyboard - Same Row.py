@@ -33,11 +33,12 @@ def is_same_row(word):
         if all(char in row for char in word.upper()):
             return True
     return False
+words = input().strip().split(',')
 rows = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM']
-words = input().split(',')
+flg = 1
 for word in words:
     if is_same_row(word):
-        print(word)
+        print(word,end=" ")
         flg = 1 
 if not flg:
     print(-1)
