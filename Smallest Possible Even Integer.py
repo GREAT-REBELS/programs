@@ -31,21 +31,22 @@ def splitNum(num):
 X, Y = map(int, input().split())
 nums = splitNum(X) + splitNum(Y)
 nums.sort()
-#checking for leading Zeros
+#checking for leading Zeros and swapping the first occuring Zero with non zero digit
 if nums[0] == 0:
     for i in range(1, len(nums)):
         if nums[i] != 0:
             nums[0], nums[i] = nums[i], 0
             break
 #Making the last digit as Even
-for i in range(len(nums) - 1, -1, -1):
-    if nums[i] % 2 == 0 and nums[-1] % 2 != 0:
-        nums[-1], nums[i] = nums[i], nums[-1]
-        break
+if nums[-1] % 2 != 0:
+    for i in range(len(nums) - 1, -1, -1):
+        if nums[i] % 2 == 0:
+            nums.insert(len(nums),nums[i])
+            del nums[i]
+            break
 
 if nums[-1] % 2 != 0:
     print(-1)
 else:
     for dig in nums:
         print(dig, end="")
-
