@@ -28,13 +28,14 @@ The words "Apple" and "Apple" are rhyming words. There are 8 rhyming words in th
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def get_second_half(word):
     length = len(word)
-    half_length = (length + 1) // 2
-    return word[-half_length:].lower()
+    half_length = length // 2 
+    return word[half_length:].lower()
 
 words = input().split()
 rhyme_count = {}
 for word in words:
     rhyme_part = get_second_half(word)
+    print(rhyme_part)
     if rhyme_part in rhyme_count:
         rhyme_count[rhyme_part] += 1
     else:
