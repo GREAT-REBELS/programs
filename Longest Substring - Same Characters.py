@@ -30,8 +30,9 @@ while i < len(word):
     while i + 1 < len(word) and word[i].lower() == word[i + 1].lower():
         i += 1
     i += 1
-    subStrings.append(word[K:i])
-    maxLen = max(maxLen, len(word[K:i]))
+    maxLen = max(maxLen, len(word[K:i])) 
+    if len(word[K:i]) >= maxLen:
+        subStrings.append(word[K:i])
 if maxLen == 1:
     print(-1)
     quit()
