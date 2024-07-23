@@ -30,3 +30,14 @@ a#cE#23pb1bA12ACLK13LAb#32cP
 Output:
 YES
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from collections import Counter
+S1 = input().strip()
+S2 = input().strip()
+X = int(input())
+counter = Counter(S2)
+for ch in S1:
+    if counter[ch] < X:
+        print("NO")
+        quit()
+    counter[ch] -= X
+print("YES")
