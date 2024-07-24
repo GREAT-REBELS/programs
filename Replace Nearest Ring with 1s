@@ -1,0 +1,82 @@
+The program must accept a matrix of size RxC containing 0s, 1s and exactly one X as the input. The program must find the full ring near to X with at least one 0. Then the program must modify the matrix by 
+replacing all Os in the full ring with 1s. Finally, the program must print the modified matrix as the output. If there is no such full ring near to X, the program must print the given matrix as it is.
+
+Example Input/Output 1:
+Input:
+5 6
+0 1 1 1 0 1
+1 1 0 1 1 0
+0 1 1 X 0 1
+0 0 1 0 0 1
+0 0 0 1 1 0
+Output:
+0 1 1 1 0 1
+1 1 1 1 1 0
+0 1 1 X 1 1
+0 0 1 1 1 1
+0 0 0 1 1 0
+Explanation:
+The full ring near to X with at least one 0 is highlighted below.
+0 1 1 1 0 1
+1 1 '0' '1' '1' 0
+0 1 '1' X '0' 1
+0 0 '1' '0' '0' 1
+0 0 0 1 1 0
+After replacing Os in the full ring with 1s, the matrix becomes
+0 1 1 1 0 1
+1 1 1 1 1 0
+0 1 1 X 1 1
+0 0 1 1 1 1
+0 0 0 1 1 0
+Example Input/Output 2:
+
+Input:
+8 7
+1 0 0 1 0 0 0
+0 1 1 0 1 1 0
+1 1 1 1 1 1 1
+1 1 X 1 0 1 0
+1 1 1 1 1 1 0
+0 1 1 0 1 0 1
+0 0 1 0 0 0 1
+0 1 1 1 1 1 0
+Output:
+1 0 0 1 0 0 0
+1 1 1 1 1 1 0
+1 1 1 1 1 1 1
+1 1 X 1 1 1 0
+1 1 1 1 1 1 0
+1 1 1 1 1 0 1
+0 0 1 0 0 0 1
+0 1 1 1 1 1 0
+Explanation:
+The full ring near to X with at least one 0 is highlighted below.
+1 0 0 1 0 0 0
+'0' '1' '1' '0' '1' 1 0
+'1' 1 1 1 '1' 1 1
+'1' 1 X 1 '0' 1 0
+'1' 1 1 1 '1' 1 0
+'0' '1' '1' '0' '1' 0 1
+0 0 1 0 0 0 1
+0 1 1 1 1 1 0
+After replacing Os in the full ring with 1s, the matrix becomes
+1 0 0 1 0 0 0
+1 1 1 1 1 1 0
+1 1 1 1 1 1 1
+1 1 X 1 1 1 0
+1 1 1 1 1 1 0
+1 1 1 1 1 0 1
+0 0 1 0 0 0 1
+0 1 1 1 1 1 0
+
+Example Input/Output 3:
+Input:
+3 4
+1 0 1 0
+X 0 1 0
+0 0 0 0
+Output:
+1 0 1 0
+X 0 1 0
+0 0 0 0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
