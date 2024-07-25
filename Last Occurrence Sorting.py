@@ -28,8 +28,7 @@ S1 = input()
 S2 = input()
 occ = []
 for ch in S2:
-    occ.append(
-        (ch, S1.rindex(ch))) #rindex() method finds the last occurrence of the specified value
+    occ.append((ch, S1.rindex(ch))) #rindex() method finds the last occurrence of the specified value
 occ.sort(key=lambda X: X[1])
 for item in occ:
     print(item[0], end="")
