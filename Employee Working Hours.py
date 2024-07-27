@@ -37,7 +37,7 @@ for _ in range(N):
     total_mins += HHtoMM(exit_time) - HHtoMM(entry_time)
 HH = total_mins // 60
 MM = total_mins % 60
-if HH > 0:
-    print(f"{HH} Hours {MM} Minutes")
+if HH == 1:
+    print(f"{HH} Hour {MM} Minutes")
 else:
-    print(f"{MM} Minutes")
+     print(f"{HH} Hours {MM} Minutes")
