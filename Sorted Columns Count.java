@@ -39,10 +39,11 @@ public class Main {
     int res = 0;
     for (int i = 0; i < C; i++) {
       int flg = 1;
-      for (int j = 1; j < R; j++) {
-        if (mat[j - 1][i] < mat[j][i])
+      for (int j = 0; j < R-1; j++) {
+        if (mat[j][i] < mat[j+1][i]){
           flg = 0;
           break;
+        }
       }
       if (flg == 1)
         res += 1;
