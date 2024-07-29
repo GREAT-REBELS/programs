@@ -82,7 +82,7 @@ public class Main {
         D = i;
       }
     }
-    if(mat[N/2][N/2]){
+    if(mat[N/2][N/2] > maxSum){
       System.out.print(mat[N/2][N/2]); 
       return;
     }
