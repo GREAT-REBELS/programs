@@ -82,6 +82,10 @@ public class Main {
         D = i;
       }
     }
+    if(mat[N/2][N/2]){
+      System.out.print(mat[N/2][N/2]); 
+      return;
+    }
     for (int i = D; i < N - D; i++) {
       for (int j = D; j < N - D; j++) {
         if (i == D || i == N - D - 1 || j == D || j == N - D - 1) {
